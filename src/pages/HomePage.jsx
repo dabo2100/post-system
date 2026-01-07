@@ -13,7 +13,7 @@ export default function HomePage() {
     let currentUser = localStorage.getItem('currentUser');
 
     if (currentUser) {
-      let allPosts = JSON.parse(localStorage.getItem('posts') || []);
+      let allPosts = JSON.parse(localStorage.getItem('posts')) || [];
 
       let users = JSON.parse(localStorage.getItem('users')) || [];
 
