@@ -39,7 +39,7 @@ export default function HomePage() {
   };
 
   const handlePost = (postValues) => {
-    let allPosts = JSON.parse(localStorage.getItem('posts') || []);
+    let allPosts = JSON.parse(localStorage.getItem('posts')) || [];
     let post = { ...postValues, postBy: userInfo.userEmail };
     allPosts.push(post);
     localStorage.setItem('posts', JSON.stringify(allPosts));
